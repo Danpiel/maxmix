@@ -82,6 +82,7 @@ var en = map[string]string{
 	"Не установлен. Нужен как виртуальное устройство; после установки перезагрузите систему": "Not installed. Needed as the virtual device; reboot after installing",
 	"Нет входов типа «Игра (авто)» или «Всё, что звучит»":                                    "No “Game (auto)” or “Everything playing” inputs",
 	"О программе": "About",
+	"Версия":      "Version",
 	"Общие":       "General",
 	"Окно на весь экран, на переднем плане или запущено из лаунчера. Сейчас игра не найдена": "Fullscreen window, foreground window or launched from a game launcher. No game detected right now",
 	"Определять игру автоматически":             "Detect the game automatically",

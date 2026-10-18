@@ -343,7 +343,7 @@ func (s *settingsWin) build(g *gui) {
 	s.cableDesc = tr("Проверка…")
 	row(p, contentY+252, 72, glyphDownload, "VB-CABLE", &s.cableDesc)
 	btn(p, tr("Установить"), pRight-16-120, contentY+252+21, 120, idBtnCable, false)
-	about := tr("Микшер игры и Discord в одно виртуальное устройство для записи Steam / NVIDIA. Go, без зависимостей.")
+	about := tr("Микшер игры и Discord в одно виртуальное устройство для записи Steam / NVIDIA. Go, без зависимостей.") + " " + tr("Версия") + " " + version
 	row(p, contentY+336, 72, glyphInfo, tr("О программе"), &about)
 	exitDesc := tr("Остановить микшер и убрать иконку из трея")
 	row(p, contentY+420, 72, glyphPower, tr("Выход"), &exitDesc)

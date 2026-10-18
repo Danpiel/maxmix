@@ -38,7 +38,11 @@ commands:
   install-cable   install VB-CABLE (downloads the driver pack if needed, UAC prompt)
   autostart       start with Windows            (autostart -remove to undo)
   config          print the effective configuration
+  version         print the version
 `
+
+// version is stamped at release build time: -ldflags "-X main.version=v1.2.3".
+var version = "dev"
 
 func main() {
 	hasConsole := attachParentConsole()
@@ -52,6 +56,10 @@ func main() {
 	if len(rest) > 0 {
 		cmd = rest[0]
 		rest = rest[1:]
+	}
+	if cmd == "version" {
+		fmt.Println("maxmix", version)
+		return
 	}
 
 	if err := initCOM(); err != nil {

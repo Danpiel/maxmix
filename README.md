@@ -9,6 +9,11 @@
   Маленькая утилита в трее для Windows, без зависимостей.
 </p>
 
+<p align="center">
+  <a href="https://github.com/Danpiel/maxmix/actions/workflows/ci.yml"><img src="https://github.com/Danpiel/maxmix/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://github.com/Danpiel/maxmix/releases/latest"><img src="https://img.shields.io/github/v/release/Danpiel/maxmix" alt="Release"></a>
+</p>
+
 ---
 
 Steam Game Recording и NVIDIA ShadowPlay пишут звук только с устройства по
@@ -33,7 +38,8 @@ Steam Game Recording и NVIDIA ShadowPlay пишут звук только с у
 
 ## Быстрый старт
 
-1. Соберите `maxmix.exe` (см. ниже) и запустите его. Появится иконка в трее.
+1. Скачайте архив из [Releases](https://github.com/Danpiel/maxmix/releases/latest),
+   распакуйте и запустите `maxmix.exe`. Появится иконка в трее.
 2. Поставьте виртуальный кабель: **Настройки → Общие → Установить VB-CABLE**
    (или `maxmixc install-cable`). Иногда после этого нужна перезагрузка.
 3. В Steam включите *Запись игр → Записывать звук → «Весь системный звук»*.
@@ -51,6 +57,11 @@ build.cmd
 ```
 
 Получится два файла: `maxmix.exe` для трея и `maxmixc.exe` для командной строки.
+Тесты: `go test ./...`.
+
+CI на каждый пуш прогоняет gofmt, vet, тесты и сборку. Чтобы выпустить релиз,
+достаточно запушить тег: `git tag v1.0.0 && git push origin v1.0.0`. Архив с
+обоими exe появится в Releases сам.
 
 ## Команды
 
