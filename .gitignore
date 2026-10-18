@@ -1,0 +1,6 @@
+*.exe
+*.exe.old
+*.log
+*.wav
+maxmix.json
+.claude/
